@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Tab Organizer</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>AI Tab Organizer</h1>
+
+    <div class="api-section">
+      <input type="password" id="apiKey" placeholder="Enter Gemini API Key">
+      <button id="saveKey">Save Key</button>
+    </div>
+
+    <div class="keywords-section">
+      <input type="text" id="customKeywords" placeholder="Optional: Enter custom group keywords (e.g., Work, Shopping, Research)">
+      <div class="checkbox-row">
+        <label class="checkbox-label">
+          <input type="checkbox" id="useExistingGroups" checked>
+          <span>Consider existing tab groups</span>
+        </label>
+        <label class="checkbox-label">
+          <input type="checkbox" id="allWindows">
+          <span>Include all windows</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button id="analyzeBtn" class="primary">Analyze & Organize Tabs</button>
+      <button id="suggestCloseBtn">Suggest Tabs to Close</button>
+    </div>
+
+    <div id="status" class="status"></div>
+
+    <div id="results" class="results">
+      <div id="groups" class="groups"></div>
+      <div id="suggestions" class="suggestions"></div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
